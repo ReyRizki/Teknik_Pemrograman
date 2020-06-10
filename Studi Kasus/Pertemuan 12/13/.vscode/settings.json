@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/media/reyrizki/DATA/Kuliah/Matkul/Semester 2/Teknik Pemrograman/Codes/Studi Kasus/Pertemuan 12/13/product/lib/gson-2.8.6.jar"
+    ]
+}
