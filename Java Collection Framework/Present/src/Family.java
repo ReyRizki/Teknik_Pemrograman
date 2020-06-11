@@ -19,7 +19,41 @@ public class Family {
             this.uncles.add(temp);
             return true;
         }
-        // Uncle uncleTemp = new Uncle(name);
+    }
+
+    public boolean addNiece(String name, int day, int month) {
+        if (this.findNiece(name) != null)
+            return false;
+        else {
+            this.nieces.add(new Niece(name, day, month));
+            return true;
+        }
+    }
+
+    public Uncle findUncle(String name) {
+        Iterator<Uncle> it = this.uncles.iterator();
+
+        while (it.hasNext()) {
+            Uncle temp = (Uncle) it.next();
+
+            if (temp.getName() == name) 
+                return temp;
+        }
+
+        return null;
+    }
+
+    public Niece findNiece(String name) {
+        Iterator<Niece> it = this.nieces.iterator();
+
+        while (it.hasNext()) {
+            Niece temp = (Niece) it.next();
+
+            if (temp.getName() == name)
+                return temp;
+        }
+
+        return null;
     }
 
     public void listUncles() {

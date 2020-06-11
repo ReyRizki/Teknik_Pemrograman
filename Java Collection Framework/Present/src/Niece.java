@@ -1,6 +1,6 @@
 import java.util.LinkedHashMap;
 
-public class Niece {
+public class Niece implements Comparable<Niece>{
     private String name;
     private int day;
     private int month;
@@ -11,6 +11,10 @@ public class Niece {
         this.day = day;
         this.month = month;
         this.presents = new LinkedHashMap<Uncle, String>();
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public int compareTo(Niece niece) {
