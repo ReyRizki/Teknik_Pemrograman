@@ -11,14 +11,27 @@ public class Family {
     }
 
     public boolean addUncle(String name) {
-        // Uncle uncleTemp = new Uncle(name);
-        this.uncles.add(new Uncle(name));
+        Uncle temp = new Uncle(name);
 
-        return true;
+        if (uncles.contains(temp))
+            return false;
+        else {
+            this.uncles.add(temp);
+            return true;
+        }
+        // Uncle uncleTemp = new Uncle(name);
     }
 
     public void listUncles() {
         Iterator<Uncle> it = this.uncles.iterator();
+
+        while (it.hasNext()) {
+            System.out.println(it.next());
+        }
+    }
+
+    public void listNieces() {
+        Iterator<Niece> it = this.nieces.iterator();
 
         while (it.hasNext()) {
             System.out.println(it.next());

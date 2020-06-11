@@ -3,8 +3,12 @@ public class Main {
         Family family = new Family();
 
         family.addUncle("Muthu");
+        // family.listUncles();
+
         family.addUncle("Iroh");
-        
+
+        family.addUncle("Muthu");
         family.listUncles();
+        
     }
 }
