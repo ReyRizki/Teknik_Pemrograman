@@ -37,7 +37,7 @@ public class Family
         while (it.hasNext()) {
             Uncle temp = (Uncle) it.next();
 
-            if (temp.getName() == name) 
+            if (temp.getName().equals(name))
                 return temp;
         }
 
@@ -52,7 +52,7 @@ public class Family
         {
             Niece temp = (Niece) it.next();
 
-            if (temp.getName() == name)
+            if (temp.getName().equals(name));
                 return temp;
         }
 
@@ -109,21 +109,28 @@ public class Family
 
     public void birthday(Niece niece, TreeSet<Uncle> uncles)
     {
-        System.out.println("Today is " + niece.getName() + "\'s birthday!");
-        System.out.println("She gets:");
-
-        niece.listPresents(uncles);
-
-        niece.clearPresents();
-
-        Iterator<Uncle> it = uncles.iterator();
-
-        while (it.hasNext())
+        try
         {
-            Uncle temp = (Uncle) it.next();
-
-            if (temp.getPresents().containsKey(niece))
-                temp.getPresents().remove(niece);
+            System.out.println("Today is " + niece.getName() + "\'s birthday!");
+            System.out.println("She gets:");
+    
+            niece.listPresents(uncles);
+    
+            niece.clearPresents();
+    
+            Iterator<Uncle> it = uncles.iterator();
+    
+            while (it.hasNext())
+            {
+                Uncle temp = (Uncle) it.next();
+    
+                if (temp.getPresents().containsKey(niece))
+                    temp.getPresents().remove(niece);
+            }
+        }
+        catch (NullPointerException e)
+        {
+            System.out.println("Niece is not exist\n");
         }
     }
 }
