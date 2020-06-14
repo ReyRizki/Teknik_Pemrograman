@@ -78,7 +78,7 @@ public class Menu
                 break;
 
             case 1:
-                System.out.print("Input uncle's name: ");
+                System.out.print("Name: ");
                 String uncleName = sc.nextLine();
                 
                 if (family.addUncle(uncleName))
@@ -88,7 +88,7 @@ public class Menu
                 break;
     
             case 2:
-                System.out.print("Input niece's name: ");
+                System.out.print("Name: ");
                 String nieceName = sc.nextLine();
 
                 System.out.print("Day: ");
@@ -109,7 +109,7 @@ public class Menu
         } 
         catch (NumberFormatException e)
         {
-            System.out.println("Input is not an integer\n");
+            System.out.println("Input is not an integer");
             this.addMember(family);
         }
 

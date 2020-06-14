@@ -9,6 +9,21 @@ public class Main
         Menu menu = new Menu();
 
         menu.mainMenu(family);
+
+        // family.addNiece("Reina", 14, 6);
+        // family.addNiece("Azula", 1, 1);
+        // family.listNieces();
+        // System.out.println(family.findNiece("Azula"));
+
+        // family.findNiece("Azula");
+        
+        // String name1 = "Azula";
+        // System.out.println("Azula" == "Reina");
+        // family.addNiece(name1, 1, 1);
+        // family.addNiece("Reina", 14, 6);
+        // family.listNieces();
+        // System.out.println(family.findNiece("Reina"));
+        // family.findNiece("Reina");
         
         // Scanner sc = new Scanner(System.in);
         // int id1;

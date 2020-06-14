@@ -48,11 +48,18 @@ public class Family
     {
         Iterator<Niece> it = this.nieces.iterator();
 
+        // System.out.println(name);
+
         while (it.hasNext()) 
         {
             Niece temp = (Niece) it.next();
 
-            if (temp.getName().equals(name));
+            // System.out.println(temp.getName());
+            // System.out.println(name);
+            // System.out.println(temp.getName() == name);
+            // System.out.println(temp.getName().equals(name));
+            
+            if (temp.getName().equals(name))
                 return temp;
         }
 
@@ -63,20 +70,16 @@ public class Family
     {
         Iterator<Uncle> it = this.uncles.iterator();
 
-        while (it.hasNext()) 
-        {
-            System.out.println(it.next());
-        }
+        while (it.hasNext())
+            System.out.println("Uncle " + it.next());
     }
 
     public void listNieces() 
     {
         Iterator<Niece> it = this.nieces.iterator();
 
-        while (it.hasNext()) 
-        {
+        while (it.hasNext())
             System.out.println(it.next());
-        }
     }
 
     // ==========
@@ -98,12 +101,15 @@ public class Family
 
     public boolean addNiece(String name, int day, int month) 
     {
-        if (this.findNiece(name) != null)
-            return false;
-        else 
+        if (this.findNiece(name) == null)
         {
             this.nieces.add(new Niece(name, day, month));
             return true;
+        }
+        else 
+        {
+            // System.out.println(this.findNiece(name).getName());
+            return false;
         }
     }
 
