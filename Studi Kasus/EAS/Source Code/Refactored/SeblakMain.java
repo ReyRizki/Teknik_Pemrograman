@@ -8,9 +8,6 @@ public class SeblakMain {
     public static void main(String[] args) {
         Seblak kerupuk = new SeblakKerupukMerah();
         Seblak makroni = new SeblakMakaroni();
-
-        // Seblak kerupuk = new Seblak("Seblak Kerupuk Merah", 10000);
-        // Seblak makroni = new Seblak("Seblak Makroni", 8000);
         
         SeblakOrder t1 = new SeblakOrder(kerupuk, 1); // Pesanan ke1
         
