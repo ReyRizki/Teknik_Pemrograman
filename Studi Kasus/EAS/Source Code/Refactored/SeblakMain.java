@@ -19,7 +19,7 @@ public class SeblakMain {
 
         SeblakOrder t3 = new SeblakOrder(makroni, 3); // Pesanan ke3
         t3.tambahCeker(3);
-        t3.setTambahTulang();
+        t3.tambahTulang();
 
         System.out.println(t1.hitungTotalHarga());
         System.out.println(t2.hitungTotalHarga());

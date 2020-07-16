@@ -2,26 +2,19 @@ package Refactored;
 
 import Refactored.Seblak.Seblak;
 import Refactored.Topping.Ceker;
+import Refactored.Topping.Tulang;
 
 public class SeblakOrder {
     private int jumlah;
     private Seblak seblak;
-    private boolean tambahTulang;
-    private static float hargaTulang = 1000;
 
     public SeblakOrder(Seblak s, int jml) {
         seblak = s;
         jumlah = jml;
-        tambahTulang = false;
     }
 
     public float hitungTotalHarga() {
-        float harga = (seblak.getHarga() * jumlah);
-        if (tambahTulang) {
-            harga += hargaTotalTulang();
-        }
-
-        return harga;
+        return seblak.getHarga() * jumlah;
     }
 
     public int getJumlahBeli() {
@@ -32,16 +25,20 @@ public class SeblakOrder {
         return seblak;
     }
 
-    private float hargaTotalTulang() {
-        return hargaTulang * getJumlahBeli();
+    public void tambahCeker() {
+        this.seblak = new Ceker(this.seblak, 1);
     }
 
     public void tambahCeker(int jml) {
         this.seblak = new Ceker(this.seblak, jml);
     }
 
-    public void setTambahTulang() {
-        tambahTulang = true;
+    public void tambahTulang() {
+        this.seblak = new Tulang(this.seblak, 1);
+    }
+
+    public void tambahTulang(int jml) {
+        this.seblak = new Tulang(this.seblak, jml);
     }
 
 }
