@@ -1,5 +1,10 @@
 package Refactored.Seblak;
 
+/**
+ * Absctract class Seblak as template for kinds of seblaks
+ * 
+ * @author ReyRizki
+ */
 public abstract class Seblak {
     protected String nama;
 
