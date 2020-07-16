@@ -1,19 +1,11 @@
 package Refactored.Seblak;
 
-public class Seblak {
-    private float harga;
-    private String nama;
-
-    public Seblak(String nama, float harga) {
-        this.nama = nama;
-        this.harga = harga;
-    }
-
-    public float getHarga() {
-        return harga;
-    }
+public abstract class Seblak {
+    protected String nama;
 
     public String getNama() {
         return nama;
     }
+
+    public abstract float getHarga();
 }
